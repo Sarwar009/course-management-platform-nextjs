@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content">
+    <footer className="footer p-10 bg-neutral text-neutral-content flex flex-col text-center md:flex-row md:justify-around">
       <nav>
         <header className="footer-title">Services</header>
         <Link href="/courses" className="link link-hover">Course Catalog</Link>

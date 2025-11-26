@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 async function getCourseDetails(id) {
     const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-
+    
     try {
         const res = await fetch(`${BACKEND_URL}/api/courses/${id}`, { 
             cache: 'no-store' 

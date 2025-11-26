@@ -13,8 +13,8 @@ async function getCourses() {
             throw new Error(`Failed to fetch courses: ${res.statusText}`);
         }
         return res.json();
-    } catch (error) {
-        console.error("Fetch Error:", error.message);
+    } catch (err) {
+        console.log("Fetch Error:", err.message);
         return []; 
     }
 }
