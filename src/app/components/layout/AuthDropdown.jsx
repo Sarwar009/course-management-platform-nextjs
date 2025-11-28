@@ -7,7 +7,8 @@ export default function AuthDropdown() {
 
   if (!session) return null;
 
-  const userEmail = session.user.email || 'User';
+  const userEmail = session.user.email || 'User email';
+  
 
   return (
     <div className="dropdown dropdown-end">
@@ -18,10 +19,10 @@ export default function AuthDropdown() {
           </span>
         </div>
       </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-1 p-2 shadow bg-base-100 rounded-box w-52">
         <li>
           <a className="font-bold">{session.user.name || userEmail}</a>
-          <span className="text-xs text-info ml-4">({session.user.role || 'user'})</span>
+          {/* <span className="text-xs text-info ml-4">({session.user.role || 'user email'})</span> */}
         </li>
         <div className="divider my-0"></div>
         <li><Link href="/courses/add">Add Product (Course)</Link></li>
